@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="618e90d7f5c59205833718df" path="/1/cards/{card_id}" id="b6eca085-2256-4697-b9fe-06fc8f3719fa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b6eca085-2256-4697-b9fe-06fc8f3719fafileName">618e90d7f5c59205833718df</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>card_id</con:name>
+      <con:value>1234</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>1234</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="618e90d7f5c59205833718df" id="cc1352a4-80ec-4764-be76-e145f94e5b2b" method="PUT">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>desc</con:name>
+        <con:value>The new card</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>The new card</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value>004057eb7c0b748783f69e006b83e85c</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>004057eb7c0b748783f69e006b83e85c</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>token</con:name>
+        <con:value>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:e90="https://api.trello.com/1/cards/618e90d7f5c59205833718df">e90:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain; charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="909898b4-1964-435d-a26b-20885d7aebf4" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+        <con:entry key="desc" value="The new card"/>
+        <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>desc</con:entry>
+        <con:entry>key</con:entry>
+        <con:entry>token</con:entry>
+        <con:entry>card_id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="618e90d7f5c59205833718df 2" id="664f2cb4-f206-4dfc-8bc9-3e8a46a5eeb1" method="DELETE">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value>004057eb7c0b748783f69e006b83e85c</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>004057eb7c0b748783f69e006b83e85c</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>token</con:name>
+        <con:value>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain; charset=utf-8</con:mediaType>
+      <con:status>404 400</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:e90="https://api.trello.com/1/cards/618e90d7f5c59205833718df">e90:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="b8bcc6bd-63d5-4e50-9fe3-ed12e588149c" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+        <con:entry key="card_id" value="1234"/>
+        <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>key</con:entry>
+        <con:entry>token</con:entry>
+        <con:entry>card_id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="707438a7-6c92-4ad7-b92a-e041a883fe07" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Create Update and Delete Card" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="707438a7-6c92-4ad7-b92a-e041a883fe07fileName">Create-Update-and-Delete-Card</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="CreateNewCard" id="40beb70f-56e0-4a80-92c8-ba793c96b067">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards" methodName="Cards" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CreateNewCard" id="69e4e96a-2f4e-4b5c-abce-bdc02d9802f3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/cards</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3dcc8e92-b65e-410b-a08e-41682e44798c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="4d077bd2-687d-423e-82ca-99561a2a1214" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value="Sanmai"/>
+          <con:entry key="idList" value="618e8af8f3ecd842757fcf0f"/>
+          <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+          <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>idList</con:entry>
+          <con:entry>name</con:entry>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay" id="32d07e6f-b441-47e9-b006-df57a5353375">
+    <con:settings/>
+    <con:config>
+      <delay>10000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update Card" id="e449ed88-4b6a-4dd3-855c-5bce7adcdcf9">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards/{card_id}" methodName="618e90d7f5c59205833718df" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Update Card" id="909898b4-1964-435d-a26b-20885d7aebf4" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/cards/618e90d7f5c59205833718df</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="ed3fc81d-3ddc-4717-b602-ec1ce5232255" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c78f6594-f9cf-4129-b324-2445c67797b3" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+          <con:entry key="card_id" value="${CreateNewCard#Response#$['id']}"/>
+          <con:entry key="desc" value="The new card"/>
+          <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>desc</con:entry>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+          <con:entry>card_id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay 2" id="507006a9-c719-4e02-88ef-8e42ae61136d">
+    <con:settings/>
+    <con:config>
+      <delay>10000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete Card" id="8f5aaf2b-00cc-4efb-9e13-944fbe2bbc09">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards/{card_id}" methodName="618e90d7f5c59205833718df 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Delete Card" id="b8bcc6bd-63d5-4e50-9fe3-ed12e588149c" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/cards/618e90d7f5c59205833718df</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="cc2a4a24-d148-4f46-afc6-532cabac8b1f" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="f1c8a03f-bec2-4d87-aeff-b7451d4f1a80" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+          <con:entry key="card_id" value="${CreateNewCard#Response#$['id']}"/>
+          <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+          <con:entry>card_id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Groovy Script" id="2313af34-9f6b-4b71-adf7-5b44e0609940">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:securityTest id="b46c37f9-4a70-47a1-a2b4-d6482ad59a73" testCaseId="707438a7-6c92-4ad7-b92a-e041a883fe07" name="Security Test 1" failSecurityTestOnScanErrors="true">
+    <con:settings>
+      <con:setting id="IncludeOverview">true</con:setting>
+      <con:setting id="IncludeResults">true</con:setting>
+      <con:setting id="IncludeSecurityTestOverview">true</con:setting>
+      <con:setting id="FlowLayout">false</con:setting>
+      <con:setting id="b46c37f9-4a70-47a1-a2b4-d6482ad59a73fileName">Groovy-Script</con:setting>
+    </con:settings>
+    <con:testStepSecurityTest>
+      <con:testStepId>40beb70f-56e0-4a80-92c8-ba793c96b067</con:testStepId>
+      <con:testStepSecurityScan type="BoundaryScan" name="Boundary Scan" id="9a5b0ded-cd3c-4764-af88-bc486cf2769f" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+        <con:settings/>
+        <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:assertion type="Sensitive Information Exposure" id="d0d7e995-6721-4bdf-9334-c07ba26fd219" name="Sensitive Information Exposure">
+          <con:configuration/>
+        </con:assertion>
+        <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:parameters label="idList" parameterName="idList" xpath="" checked="true"/>
+          <con:parameters label="token" parameterName="token" xpath="" checked="true"/>
+          <con:parameters label="name" parameterName="name" xpath="" checked="true"/>
+          <con:parameters label="key" parameterName="key" xpath="" checked="true"/>
+        </con:checkedParameters>
+        <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:strategy>ONE_BY_ONE</con:strategy>
+          <con:delay>100</con:delay>
+        </con:executionStrategy>
+      </con:testStepSecurityScan>
+    </con:testStepSecurityTest>
+    <con:testStepSecurityTest>
+      <con:testStepId>e449ed88-4b6a-4dd3-855c-5bce7adcdcf9</con:testStepId>
+      <con:testStepSecurityScan type="BoundaryScan" name="Boundary Scan" id="613647b8-6f84-43ab-8665-304690a303a5" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+        <con:settings/>
+        <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:assertion type="Sensitive Information Exposure" id="29352abe-1f54-4c2b-905b-78bb879bc569" name="Sensitive Information Exposure">
+          <con:configuration/>
+        </con:assertion>
+        <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:parameters label="card_id" parameterName="card_id" xpath="" checked="true"/>
+          <con:parameters label="token" parameterName="token" xpath="" checked="true"/>
+          <con:parameters label="key" parameterName="key" xpath="" checked="true"/>
+          <con:parameters label="desc" parameterName="desc" xpath="" checked="true"/>
+        </con:checkedParameters>
+        <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:strategy>ONE_BY_ONE</con:strategy>
+          <con:delay>100</con:delay>
+        </con:executionStrategy>
+      </con:testStepSecurityScan>
+    </con:testStepSecurityTest>
+    <con:testStepSecurityTest>
+      <con:testStepId>8f5aaf2b-00cc-4efb-9e13-944fbe2bbc09</con:testStepId>
+      <con:testStepSecurityScan type="BoundaryScan" name="Boundary Scan" id="deab5746-94a5-4068-bdc2-41cccebcb31f" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+        <con:settings/>
+        <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:assertion type="Sensitive Information Exposure" id="65e832f5-65ca-44e5-8acb-09376c7f2b77" name="Sensitive Information Exposure">
+          <con:configuration/>
+        </con:assertion>
+        <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:parameters label="card_id" parameterName="card_id" xpath="" checked="true"/>
+          <con:parameters label="token" parameterName="token" xpath="" checked="true"/>
+          <con:parameters label="key" parameterName="key" xpath="" checked="true"/>
+        </con:checkedParameters>
+        <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:strategy>ONE_BY_ONE</con:strategy>
+          <con:delay>100</con:delay>
+        </con:executionStrategy>
+      </con:testStepSecurityScan>
+    </con:testStepSecurityTest>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:securityTest>
+</con:testCase>

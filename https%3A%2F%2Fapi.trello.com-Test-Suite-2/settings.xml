@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="8a49f626-00d3-47b5-b28f-0a6bec45fae1" name="https://api.trello.com Test Suite 2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8a49f626-00d3-47b5-b28f-0a6bec45fae1fileName">https%3A%2F%2Fapi.trello.com-Test-Suite-2</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

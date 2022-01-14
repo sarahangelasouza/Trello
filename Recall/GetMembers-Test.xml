@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="58f4f64c-3ce9-4cea-91dc-15820db7a2c7" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetMembers Test" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="58f4f64c-3ce9-4cea-91dc-15820db7a2c7fileName">GetMembers-Test</con:setting>
+  </con:settings>
+  <con:testStep type="groovy" name="Groovy Script" id="18006812-c924-442b-8fa5-43e6bbabf2c9">
+    <con:settings/>
+    <con:config>
+      <script>// Replace names of a project, test suite, case and step with those you need.
+
+// Connect to the test step in another project.
+
+def prj = testRunner.testCase.testSuite.project.workspace.getProjectByName("Trello-ZaWarudoWorkspace'")
+tCase = prj.testSuites['MembersSuite'].testCases['GetMembersTestCase']
+tStep = tCase.getTestStepByName("Request 1")
+
+// Call the test runner and check if it can run the specified step.
+def runner = tStep.run(testRunner, context)
+log.info ("runner status ....... : " + runner.hasResponse())</script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

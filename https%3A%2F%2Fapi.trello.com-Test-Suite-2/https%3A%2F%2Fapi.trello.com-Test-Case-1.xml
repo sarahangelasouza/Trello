@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="a72aae3c-2697-49d9-84c8-6022e9e3bd6d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="https://api.trello.com Test Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a72aae3c-2697-49d9-84c8-6022e9e3bd6dfileName">https%3A%2F%2Fapi.trello.com-Test-Case-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="19fc8737-1277-40a9-bed0-724f7296cf77">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/boards/618e8af8f3ecd842757fcf0e/members" methodName="Members" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="f6de6945-c933-453f-b1cf-f1923627e7be" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/boards/618e8af8f3ecd842757fcf0e/members</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9728be9d-db43-49a2-8473-dc07d0168f1c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="0ff62dd0-6597-4575-b2a8-f7f2292384a8" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+          <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
