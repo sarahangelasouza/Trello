@@ -6,6 +6,7 @@
     <con:setting id="FlowLayout">false</con:setting>
     <con:setting id="ErrorDetails">true</con:setting>
     <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="a491b3dd-4dd8-49af-9868-30af5d63f675fileName">Trello-ZaWarudoWorkspace-readyapi-project</con:setting>
   </con:settings>
   <con:requirements/>
   <con:properties/>
@@ -28,7 +29,6 @@
     </con:oAuth2Profile>
   </con:oAuth2ProfileContainer>
   <con:oAuth1ProfileContainer/>
-  <con:reporting/>
   <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
     <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to ReadyAPI functional tests
