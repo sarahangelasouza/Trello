@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="7a2df55a-f9d2-4779-967e-953f942a8711" name="Recall" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings>
-    <con:setting id="7a2df55a-f9d2-4779-967e-953f942a8711fileName">Recall</con:setting>
-  </con:settings>
-  <con:runType>SEQUENTIAL</con:runType>
-  <con:properties/>
-  <con:reportParameters/>
-</con:testSuite>

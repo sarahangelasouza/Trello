@@ -33,10 +33,12 @@
     <con:request name="Request 1" id="c8a52c31-5a63-4c77-8049-87565e381014" mediaType="application/json">
       <con:settings/>
       <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters>
         <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
         <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>

@@ -53,7 +53,7 @@
   <con:testStep type="delay" name="Delay" id="32d07e6f-b441-47e9-b006-df57a5353375">
     <con:settings/>
     <con:config>
-      <delay>10000</delay>
+      <delay>1000</delay>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Update Card" id="e449ed88-4b6a-4dd3-855c-5bce7adcdcf9">
@@ -100,7 +100,7 @@
   <con:testStep type="delay" name="Delay 2" id="507006a9-c719-4e02-88ef-8e42ae61136d">
     <con:settings/>
     <con:config>
-      <delay>10000</delay>
+      <delay>1000</delay>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Delete Card" id="8f5aaf2b-00cc-4efb-9e13-944fbe2bbc09">
@@ -140,12 +140,6 @@
           <con:entry>card_id</con:entry>
         </con:parameterOrder>
       </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script" id="2313af34-9f6b-4b71-adf7-5b44e0609940">
-    <con:settings/>
-    <con:config>
-      <script/>
     </con:config>
   </con:testStep>
   <con:properties/>

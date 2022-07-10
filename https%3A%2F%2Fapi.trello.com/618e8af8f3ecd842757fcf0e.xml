@@ -33,6 +33,12 @@
         <con:params/>
         <con:element>Response</con:element>
       </con:representation>
+      <con:representation type="FAULT">
+        <con:mediaType xsi:nil="true"/>
+        <con:status>400</con:status>
+        <con:params/>
+        <con:element>data</con:element>
+      </con:representation>
       <con:request name="Request 1" id="f6de6945-c933-453f-b1cf-f1923627e7be" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -55,9 +61,12 @@
         </con:parameterOrder>
       </con:request>
       <con:request name="2nd" id="61eaf92f-3939-4053-8102-a20a3ec88909" mediaType="application/json">
-        <con:settings/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:endpoint>https://api.trello.com</con:endpoint>
         <con:request/>
+        <con:originalUri>https://api.trello.com/1/boards/618e8af8f3ecd842757fcf0e/1/boards/618e8af8f3ecd842757fcf0e/members;token=f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:originalUri>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -69,10 +78,23 @@
     <con:method name="Method 2" id="e61a421c-69aa-4267-9676-ee13a6feaa3c" method="POST">
       <con:settings/>
       <con:parameters/>
+      <con:representation type="REQUEST">
+        <con:mediaType>application/json</con:mediaType>
+        <con:params/>
+      </con:representation>
+      <con:representation type="FAULT">
+        <con:mediaType>text/plain; charset=utf-8</con:mediaType>
+        <con:status>404</con:status>
+        <con:params/>
+        <con:element>data</con:element>
+      </con:representation>
       <con:request name="Request 1" id="c7fc5251-0f79-4711-97bd-b963514e00d7" mediaType="application/json" postQueryString="false">
-        <con:settings/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:endpoint>https://api.trello.com</con:endpoint>
         <con:request/>
+        <con:originalUri>https://api.trello.com/1/boards/618e8af8f3ecd842757fcf0e/1/boards/618e8af8f3ecd842757fcf0e/members</con:originalUri>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -108,10 +130,13 @@
       <con:params/>
       <con:element xmlns:e8af="https://api.trello.com/1/boards/618e8af8f3ecd842757fcf0e">e8af:Response</con:element>
     </con:representation>
-    <con:request name="Request 1" id="b0a48aaf-fcf4-449d-b6ce-3657145c6612" mediaType="application/json">
-      <con:settings/>
+    <con:request name="GetBoardInfo" id="b0a48aaf-fcf4-449d-b6ce-3657145c6612" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
       <con:endpoint>https://api.trello.com</con:endpoint>
       <con:request/>
+      <con:originalUri>https://api.trello.com/1/boards/618e8af8f3ecd842757fcf0e</con:originalUri>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
