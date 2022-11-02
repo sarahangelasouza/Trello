@@ -49,6 +49,7 @@
       <con:request/>
       <con:originalUri>https://api.trello.com/1/cards/635fe8b556cc4c01021e20c1</con:originalUri>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

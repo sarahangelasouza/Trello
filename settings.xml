@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="c1c7acf5-8ecf-47f5-9359-7db0650e9a58" created="3.30.0" activeEnvironment="Default environment" name="TrelloCards" updated="3.41.1" encryptionMode="Not encrypted" resourceRoot="" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings/>
+  <con:settings>
+    <con:setting id="c1c7acf5-8ecf-47f5-9359-7db0650e9a58fileName">TrelloCards-readyapi-project</con:setting>
+  </con:settings>
   <con:requirements/>
   <con:properties>
     <con:property>
@@ -17,7 +19,6 @@
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
-  <con:reporting/>
   <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
     <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to ReadyAPI functional tests
