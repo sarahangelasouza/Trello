@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Cards ID" path="/1/cards/{card_id}" id="9eb3ed0a-582c-4a87-bc76-60149bb6d165" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9eb3ed0a-582c-4a87-bc76-60149bb6d165fileName">Cards-ID</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>card_id</con:name>
+      <con:style>TEMPLATE</con:style>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Get Card" id="c5d259f1-dd5d-434b-b56b-4d66e3d096f8" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value>004057eb7c0b748783f69e006b83e85c</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>004057eb7c0b748783f69e006b83e85c</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>token</con:name>
+        <con:value>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:fe8="https://api.trello.com/1/cards/635fe8b556cc4c01021e20c1">fe8:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain; charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="a71d15c8-669c-4d8c-9d48-6afd475644f1" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://api.trello.com/1/cards/635fe8b556cc4c01021e20c1</con:originalUri>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+        <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>key</con:entry>
+        <con:entry>token</con:entry>
+        <con:entry>card_id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="Update Description" id="7af178d0-afbe-4e43-b1e5-ec1cd17ea3cf" method="PUT">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>desc</con:name>
+        <con:value>The new card</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>The new card</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value>004057eb7c0b748783f69e006b83e85c</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>004057eb7c0b748783f69e006b83e85c</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>token</con:name>
+        <con:value>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:e90="https://api.trello.com/1/cards/618e90d7f5c59205833718df">e90:Response</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain; charset=utf-8</con:mediaType>
+      <con:status>404 400</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="330b4965-0aea-43db-9801-10f488858b62" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="key" value="${#Project#APIKEY}"/>
+        <con:entry key="desc" value="The new card"/>
+        <con:entry key="token" value="${#Project#APITOKEN}"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>desc</con:entry>
+        <con:entry>key</con:entry>
+        <con:entry>token</con:entry>
+        <con:entry>card_id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="Delete Card" id="5c349963-e0cc-461d-b38b-28d3e9af6578" method="DELETE">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value>004057eb7c0b748783f69e006b83e85c</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>004057eb7c0b748783f69e006b83e85c</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>token</con:name>
+        <con:value>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain; charset=utf-8</con:mediaType>
+      <con:status>404 400</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:e90="https://api.trello.com/1/cards/618e90d7f5c59205833718df">e90:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="0d3fba8a-232d-4443-a2dd-3ebba83918ba" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="key" value="${#Project#APIKEY}"/>
+        <con:entry key="token" value="${#Project#APITOKEN}"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>key</con:entry>
+        <con:entry>token</con:entry>
+        <con:entry>card_id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

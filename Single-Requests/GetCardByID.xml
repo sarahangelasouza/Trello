@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="103d3bf2-738b-4ca2-ad9b-27163ba68116" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetCardByID" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="103d3bf2-738b-4ca2-ad9b-27163ba68116fileName">GetCardByID</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="52c4f3d3-1ed3-4541-a610-8efa276f70a1">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards/{card_id}" methodName="Get Card" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="a71d15c8-669c-4d8c-9d48-6afd475644f1" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:assertion type="Valid HTTP Status Codes" id="1cf8e730-e26a-409b-93f4-2b94af4ebcd2" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="a7b08038-8906-4563-9be5-4dc5b4b43513" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="key" value="${#Project#APIKEY}"/>
+          <con:entry key="token" value="${#Project#APITOKEN}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+          <con:entry>card_id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

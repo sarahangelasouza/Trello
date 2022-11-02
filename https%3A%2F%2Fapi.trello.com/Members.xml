@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Members" path="/1/boards/618e8af8f3ecd842757fcf0e/members" id="1aff72ce-b3c5-4e4e-8dfa-b41cc778b413" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="016c0404-1d38-4ed1-99c0-c4431b8342f8fileName">Members</con:setting>
+    <con:setting id="1aff72ce-b3c5-4e4e-8dfa-b41cc778b413fileName">Members</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Members" id="ee201835-63ef-4d3a-bf3c-9f2047ae3e22" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value>004057eb7c0b748783f69e006b83e85c</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>004057eb7c0b748783f69e006b83e85c</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>token</con:name>
+        <con:value>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:value>
+        <con:style>PLAIN</con:style>
+        <con:default>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="5f9214ba-b342-4079-b0ae-f827ca2b6306" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://api.trello.com/1/boards/618e8af8f3ecd842757fcf0e/members</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+        <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>key</con:entry>
+        <con:entry>token</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="2nd" id="dce9e4e8-8f1e-45b8-9099-5b8219f3c5b7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="c20858f4-2a45-48d1-a39b-36fcaaab8253" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="646c4624-d6a0-444c-8b52-0c4dc59fcbfe" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

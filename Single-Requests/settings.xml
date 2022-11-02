@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="1b633cdf-0295-48ae-bee7-f3f289ccf008" name="Single Requests" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1b633cdf-0295-48ae-bee7-f3f289ccf008fileName">Single-Requests</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

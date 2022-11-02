@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="0645b3f8-4768-4db2-8afd-f689ec40255d" name="Post-CreateNewCard" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="25117f64-fdb6-47d1-b5e5-220ab92c8a9afileName">Post-CreateNewCard</con:setting>
+    <con:setting id="0645b3f8-4768-4db2-8afd-f689ec40255dfileName">Post-CreateNewCard</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

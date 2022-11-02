@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="783f7c7d-d2e5-448a-946b-e0c46667e1ae" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Verify Update and Delete" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="783f7c7d-d2e5-448a-946b-e0c46667e1aefileName">Verify-Update-and-Delete</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="CreateNewCard" id="7728fbb5-6a43-4f9c-be2d-a8ba4d6b38e2">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards" methodName="Cards" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="CreateNewCard" id="69e4e96a-2f4e-4b5c-abce-bdc02d9802f3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/cards</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3dcc8e92-b65e-410b-a08e-41682e44798c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="00051a55-04ff-49d2-8b93-31ed9f802484" name="Response SLA">
+          <con:configuration>
+            <SLA>400</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value="Sanmai"/>
+          <con:entry key="idList" value="618e8af8f3ecd842757fcf0f"/>
+          <con:entry key="key" value="004057eb7c0b748783f69e006b83e85c"/>
+          <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>idList</con:entry>
+          <con:entry>name</con:entry>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay" id="76cb50eb-5db9-408a-a007-bcb262e11d5c">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update Description" id="222eee27-60b6-40dc-b705-4db0847e77a5">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards/{card_id}" methodName="Update Description" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Update Description" id="330b4965-0aea-43db-9801-10f488858b62" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/cards/635fe8b556cc4c01021e20c1</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="fafe1d4a-a313-4d69-8acd-971a8d83627b" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="f7bcb49c-9728-42c7-be84-66deaca8f9d2" name="Response SLA">
+          <con:configuration>
+            <SLA>400</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="key" value="${#Project#APIKEY}"/>
+          <con:entry key="card_id" value="${CreateNewCard#Response#$['id']}"/>
+          <con:entry key="desc" value="${#TestCase#Description}"/>
+          <con:entry key="token" value="${#Project#APITOKEN}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>desc</con:entry>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+          <con:entry>card_id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay 2" id="1312f628-ff8b-4c77-918c-217c4a2e1cd5">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get Card after Update" id="87caef98-8216-48a9-8401-93c3caa4d948">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards/{card_id}" methodName="Get Card" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Get Card after Update" id="a71d15c8-669c-4d8c-9d48-6afd475644f1" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/cards/635fe8b556cc4c01021e20c1</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d5e0cc65-58cf-4540-a167-176e72d071d3" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="5548d572-b844-40cb-9e2a-4729e832e97c" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="ad459826-ae8f-4634-aa28-af44039038e5" name="Match content of [desc]">
+          <con:configuration>
+            <path>$['desc']</path>
+            <content>${#TestCase#Description}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="key" value="${#Project#APIKEY}"/>
+          <con:entry key="card_id" value="${CreateNewCard#Response#$['id']}"/>
+          <con:entry key="token" value="${#Project#APITOKEN}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+          <con:entry>card_id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay 3" id="bf411183-1e5c-40eb-99a3-8a60cd4a0be5">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete Card" id="a33383de-85c4-4e5b-8b09-5c5978c3638c">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards/{card_id}" methodName="Delete Card" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Delete Card" id="0d3fba8a-232d-4443-a2dd-3ebba83918ba" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/cards/635fe8b556cc4c01021e20c1</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="36dcd970-9488-4004-b2dd-2641f22580f9" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="422353a8-624c-4f38-b22f-f8f188119813" name="Response SLA">
+          <con:configuration>
+            <SLA>400</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="key" value="${#Project#APIKEY}"/>
+          <con:entry key="card_id" value="${CreateNewCard#Response#$['id']}"/>
+          <con:entry key="token" value="${#Project#APITOKEN}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+          <con:entry>card_id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="delay" name="Delay 4" id="2ad4b33d-2563-4e2f-995e-48b9228e1f64">
+    <con:settings/>
+    <con:config>
+      <delay>500</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Get Card after Delete" id="e87b7f47-a138-4823-b635-5064a4d84bff">
+    <con:settings/>
+    <con:config service="https://api.trello.com" resourcePath="/1/cards/{card_id}" methodName="Get Card" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Get Card after Delete" id="a71d15c8-669c-4d8c-9d48-6afd475644f1" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.trello.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.trello.com/1/cards/635fe8b556cc4c01021e20c1</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="831c0b6c-5d88-4863-a62a-99faf217a337" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>404</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="f2781897-4984-4fe7-a8f8-268b005cbb84" name="Response SLA">
+          <con:configuration>
+            <SLA>400</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="DataAndMetadataAssertion" id="bad53585-0a7c-4295-a52a-865c93d4a260" name="Smart Assertion">
+          <con:configuration xsi:type="con:DataAndMetadataAssertion">
+            <con:mode>Received Data</con:mode>
+            <con:elements>
+              <con:path>//data[1]</con:path>
+              <con:element>data</con:element>
+              <con:operatorId>1</con:operatorId>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>The requested resource was not found.</con:expectedValue>
+              <con:caseSensitive>true</con:caseSensitive>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:path>//data[1]/@contentType</con:path>
+              <con:element>@contentType</con:element>
+              <con:operatorId>1</con:operatorId>
+              <con:enabled>false</con:enabled>
+              <con:expectedValue>text/plain; charset=utf-8</con:expectedValue>
+              <con:caseSensitive>true</con:caseSensitive>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:elements>
+              <con:path>//data[1]/@contentLength</con:path>
+              <con:element>@contentLength</con:element>
+              <con:operatorId>1</con:operatorId>
+              <con:enabled>false</con:enabled>
+              <con:expectedValue>37</con:expectedValue>
+              <con:caseSensitive>true</con:caseSensitive>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage>&lt;data contentType="text/plain; charset=utf-8" contentLength="37">&lt;![CDATA[The requested resource was not found.]]&gt;&lt;/data></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="key" value="${#Project#APIKEY}"/>
+          <con:entry key="card_id" value="${CreateNewCard#Response#$['id']}"/>
+          <con:entry key="token" value="f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>key</con:entry>
+          <con:entry>token</con:entry>
+          <con:entry>card_id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>Description</con:name>
+      <con:value>Yippie Kay-Yay</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+</con:testCase>

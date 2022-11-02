@@ -1,0 +1,6 @@
+https%3A%2F%2Fapi.trello.com\Cards.xml
+https%3A%2F%2Fapi.trello.com\Members.xml
+https%3A%2F%2Fapi.trello.com\Cards-ID.xml
+Post-CreateNewCard\Create-Update-and-Delete-Card.xml
+Post-CreateNewCard\Verify-Update-and-Delete.xml
+Single-Requests\GetCardByID.xml

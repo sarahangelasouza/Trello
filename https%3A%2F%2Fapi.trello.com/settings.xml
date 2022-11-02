@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="310a36b4-3180-4423-9ef6-208384dc2e8b" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.trello.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f03bea18-b70e-44d2-bbe8-876d23f6a2e9fileName">https%3A%2F%2Fapi.trello.com</con:setting>
+    <con:setting id="310a36b4-3180-4423-9ef6-208384dc2e8bfileName">https%3A%2F%2Fapi.trello.com</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://api.trello.com</con:endpoint>
+  </con:endpoints>
+</con:interface>

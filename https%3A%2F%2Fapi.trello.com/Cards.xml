@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Cards" path="/1/cards" id="e7cd5ebd-b094-450e-a211-3abcad67a219" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0ed8de81-5057-4a9d-9359-b1463c188239fileName">Cards</con:setting>
+    <con:setting id="e7cd5ebd-b094-450e-a211-3abcad67a219fileName">Cards</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Cards" id="f76b19db-b4cd-4e40-9d26-f44829a4c20d" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>idList</con:name>
+        <con:value>618e8af8f3ecd842757fcf0f</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>618e8af8f3ecd842757fcf0f</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>name</con:name>
+        <con:value>nimai</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>nimai</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>key</con:name>
+        <con:value>004057eb7c0b748783f69e006b83e85c</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>004057eb7c0b748783f69e006b83e85c</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>token</con:name>
+        <con:value>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>f2a4db10ee9dc0570704a9205c1505836328fe29eea334fa12f8fb81be176555</con:default>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:car="https://api.trello.com/1/cards">car:Response</con:element>
+    </con:representation>
+    <con:request name="Create Card" id="23406b5f-20c7-4ed4-8b4a-a0cffcaf8168" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.trello.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="name" value="nimai"/>
+        <con:entry key="idList" value="618e8af8f3ecd842757fcf0f"/>
+        <con:entry key="key" value="${#Project#APIKEY}"/>
+        <con:entry key="token" value="${#Project#APITOKEN}"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>idList</con:entry>
+        <con:entry>name</con:entry>
+        <con:entry>key</con:entry>
+        <con:entry>token</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
